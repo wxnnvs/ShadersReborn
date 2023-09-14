@@ -1,6 +1,6 @@
 # Shaders Reborn v1
 
-![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/options.png?raw=true)
+![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/menu.png?raw=true)
 
 # Progress so far:
 🟢 Port Plugin API
