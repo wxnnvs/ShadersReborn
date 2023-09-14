@@ -1,4 +1,4 @@
-# **THE CODE ON THIS REPOSITORY IS STILL THE ORIGINAL CODE FROM EAGLER REBORN**
+# **THERE IS NO CODE YET**
 # The first upload will come once the Plugin API is ported
 
 ![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/options.png?raw=true)
