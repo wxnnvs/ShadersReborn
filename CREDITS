@@ -1,7 +1,5 @@
-
  EaglercraftX Developers
  ~~~~~~~~~~~~~~~~~~~~~~~
-
  lax1dude:
  
   - Creator of Eaglercraft
@@ -14,13 +12,30 @@
   - Wrote the patch and build system
  
  ayunami2000:
- 
+
   - Many bug fixes
   - Added resource packs
   - Added screen recording
   - Added seamless fullscreen
   - Created the replit
 
+
+ Eagler Reborn Developers
+ ~~~~~~~~~~~~~~~~~~~~~~~~
+ OtterDev/OtterCodes101:
+
+  - Creator and lead developer of Eagler Reborn
+
+ ZXMushroom63:
+
+ - Wrote the plugin system and API
+
+
+ Shaders Reborn Developers
+ ~~~~~~~~~~~~~~~~~~~~~~~~~
+ wxnnvs
+
+  - Ported plugin API to eaglercraftX u19
 
 
  Code used within EaglercraftX
