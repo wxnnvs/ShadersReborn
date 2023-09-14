@@ -4,9 +4,11 @@
 ![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/options.png?raw=true)
 
 # Porting progress so far:
-🟠 Ported Plugin API. (as you can see it doesn't work)
+🟠 Port Plugin API. (as you can see it doesn't work)
 
 🔴 Somehow deleted a function from Entity.java related to the lighting, doesn't seem to brake anything
+
+⚪ Port Java support (coming after Plugin API, is gonna take a loooong time)
 
 ### Color codes
 🟢 - Done
