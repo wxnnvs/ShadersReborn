@@ -3,7 +3,7 @@
 ![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/menu.png?raw=true)
 
 # Progress so far:
-🟢 Port Plugin API
+🟠 Port Plugin API (outdated version: a3.1, updating to a4.3)
 
 ⚪ Port Java support (coming after Plugin API, is gonna take a loooong time)
 
