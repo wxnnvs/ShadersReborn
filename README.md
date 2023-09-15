@@ -1,11 +1,11 @@
-# Shaders Reborn v0.1
+# Shaders Reborn v0.2
 
 ![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/menu.png?raw=true)
 
 # Progress so far:
-🟠 Port Plugin API (outdated version: a3.1, updating to a4.3)
+🟢 Port Plugin API (Latest a4.3)
 
-🟠 Restyle Plugin Manager (coming after API update to a4.3)
+🟠 Restyle Plugin Manager
 
 ⚪ Port Java support (coming after Plugin API, is gonna take a loooong time)
 
