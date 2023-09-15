@@ -9,6 +9,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.block.material.Material;
 
 import java.lang.Class;
@@ -22,7 +23,7 @@ public class PluginAPI {
     private Minecraft mc;
     public ArrayList<String> requiredList;
     public static final Logger logger = LogManager.getLogger();
-    public static String version = "a3.1";
+    public static String version = "a4.3";
 
     @JSBody(params = { "version" }, script = "var PluginAPI = {};\r\n" + //
             "PluginAPI.events = {};\r\n" + //
@@ -110,6 +111,9 @@ public class PluginAPI {
     @JSBody(params = { "name" }, script = "return PluginAPI[name] || {};")
     public static native BaseData getGlobal(String name);
 
+    @JSBody(params = {}, script = "return PluginAPI;")
+    public static native BaseData getPluginAPI();
+
     @JSBody(params = { "data" }, script = "console.log(data);")
     public static native void logJSObj(JSObject data);
 
@@ -147,10 +151,14 @@ public class PluginAPI {
         globalsFunctor(this);
         globalsRequireFunctor(this);
 
+        getPluginAPI().setCallbackVoidWithDataArg("displayToChat", (BaseData params)->{mc.ingameGUI.getChatGUI().printChatMessage(new ChatComponentText(params.getString("msg")));});
+        
         setGlobal("enchantments", Enchantment.makePluginDataStatic());
         setGlobal("blocks", Blocks.makePluginData());
         setGlobal("items", Items.makePluginData());
         setGlobal("materials", Material.makePluginDataStatic());
+        setGlobal("constructors", PluginConstructors.makeContructorsPluginData());
+        PluginGUI.loadFont();
     }
 
     static void globalsFunctor(PluginAPI pluginAPI) {

@@ -13,9 +13,59 @@
 + import com.google.common.collect.AbstractIterator;
 + 
 
-> DELETE  1  @  1 : 5
+> CHANGE  1 : 4  @  1 : 5
 
-> INSERT  55 : 65  @  55
+~ import net.zxmushroom63.plugins.BaseData;
+~ import net.zxmushroom63.plugins.PluginData;
+~ import net.minecraft.client.Minecraft;
+
+> INSERT  32 : 75  @  32
+
++ 	@Override
++ 	public void loadPluginData(BaseData data) {
++ 		super.loadPluginData(data);
++ 	}
++ 
++ 	public static BlockPos fromPluginData(BaseData data) {
++ 		return new BlockPos(Vec3i.fromPluginData(data));
++ 	}
++ 
++ 	@Override
++ 	public PluginData makePluginData() {
++ 		PluginData data = super.makePluginData();
++ 		data.setCallbackVoid("reload", () -> {
++ 			loadPluginData(data);
++ 		});
++ 		data.setCallbackObjectWithDataArg("add", (BaseData params) -> {
++ 			return add(params.getInt("x"), params.getInt("y"), params.getInt("z")).makePluginData();
++ 		});
++ 		data.setCallbackObjectWithDataArg("up", (BaseData params) -> {
++ 			return up(params.getInt("n")).makePluginData();
++ 		});
++ 		data.setCallbackObjectWithDataArg("down", (BaseData params) -> {
++ 			return down(params.getInt("n")).makePluginData();
++ 		});
++ 		data.setCallbackObjectWithDataArg("north", (BaseData params) -> {
++ 			return north(params.getInt("n")).makePluginData();
++ 		});
++ 		data.setCallbackObjectWithDataArg("south", (BaseData params) -> {
++ 			return south(params.getInt("n")).makePluginData();
++ 		});
++ 		data.setCallbackObjectWithDataArg("east", (BaseData params) -> {
++ 			return east(params.getInt("n")).makePluginData();
++ 		});
++ 		data.setCallbackObjectWithDataArg("west", (BaseData params) -> {
++ 			return west(params.getInt("n")).makePluginData();
++ 		});
++ 		data.setCallbackObject("getBlock", () -> {
++ 			loadPluginData(data);
++ 			return Minecraft.getMinecraft().theWorld.getBlock(this).makePluginData();
++ 		});
++ 		return data;
++ 	}
++ 
+
+> INSERT  23 : 33  @  23
 
 + 	/**
 + 	 * eagler

@@ -1,7 +1,30 @@
 window.pluginLoader = function pluginLoader(pluginsArr) {
+  if (!window.eaglerPLoaderMainRun) {
+    var searchParams = new URLSearchParams(location.search);
+    searchParams.getAll("plugin").forEach((pluginToAdd) => {
+      console.log(
+        "EaglerPL: Adding plugin to loadlist from search params: " + pluginToAdd
+      );
+      pluginsArr.push(pluginToAdd);
+    });
+    if (
+      !!eaglercraftXOpts &&
+      !!eaglercraftXOpts.plugins &&
+      Array.isArray(eaglercraftXOpts.plugins)
+    ) {
+      eaglercraftXOpts.plugins.forEach((pluginToAdd) => {
+        console.log(
+          "EaglerPL: Adding plugin to loadlist from eaglercraftXOpts: " +
+            pluginToAdd
+        );
+        pluginsArr.push(pluginToAdd);
+      });
+    }
+    window.eaglerPLoaderMainRun = true;
+  }
   function checkPluginsLoaded(totalLoaded, identifier) {
     console.log(
-      "Checking if Plugins are finished :: " +
+      "EaglerPL: Checking if Plugins are finished :: " +
         totalLoaded +
         "/" +
         pluginsArr.length
@@ -10,7 +33,7 @@ window.pluginLoader = function pluginLoader(pluginsArr) {
       clearInterval(identifier);
       window.pluginGracePeriod = false;
       console.log(
-        "Checking if Plugins are finished :: All plugins loaded! Grace period off."
+        "EaglerPL: Checking if Plugins are finished :: All plugins loaded! Grace period off."
       );
     }
   }
@@ -54,7 +77,12 @@ window.pluginLoader = function pluginLoader(pluginsArr) {
       req.onload = function xhrLoadHandler() {
         console.log("EaglerPL: Loading " + currentPlugin + " via method A.");
         var script = document.createElement("script");
-        script.src = "data:text/javascript;base64," + btoa(req.responseText);
+        try {
+          script.src = "data:text/javascript;base64," + btoa(req.responseText);
+        } catch (error) {
+          methodB(currentPlugin);
+          return;
+        }
         script.setAttribute("data-plugin", currentPlugin);
         script.setAttribute("data-isplugin", true);
         script.onerror = () => {

@@ -9,9 +9,32 @@ public class PluginLoader {
     public static native void loadPlugins(String[] plugins);
 
     @JSBody(params = {}, script = "window.pluginLoader = function pluginLoader(pluginsArr) {\r\n" + //
+            "  if (!window.eaglerPLoaderMainRun) {\r\n" + //
+            "    var searchParams = new URLSearchParams(location.search);\r\n" + //
+            "    searchParams.getAll(\"plugin\").forEach((pluginToAdd) => {\r\n" + //
+            "      console.log(\r\n" + //
+            "        \"EaglerPL: Adding plugin to loadlist from search params: \" + pluginToAdd\r\n" + //
+            "      );\r\n" + //
+            "      pluginsArr.push(pluginToAdd);\r\n" + //
+            "    });\r\n" + //
+            "    if (\r\n" + //
+            "      !!eaglercraftXOpts &&\r\n" + //
+            "      !!eaglercraftXOpts.plugins &&\r\n" + //
+            "      Array.isArray(eaglercraftXOpts.plugins)\r\n" + //
+            "    ) {\r\n" + //
+            "      eaglercraftXOpts.plugins.forEach((pluginToAdd) => {\r\n" + //
+            "        console.log(\r\n" + //
+            "          \"EaglerPL: Adding plugin to loadlist from eaglercraftXOpts: \" +\r\n" + //
+            "            pluginToAdd\r\n" + //
+            "        );\r\n" + //
+            "        pluginsArr.push(pluginToAdd);\r\n" + //
+            "      });\r\n" + //
+            "    }\r\n" + //
+            "    window.eaglerPLoaderMainRun = true;\r\n" + //
+            "  }\r\n" + //
             "  function checkPluginsLoaded(totalLoaded, identifier) {\r\n" + //
             "    console.log(\r\n" + //
-            "      \"Checking if Plugins are finished :: \" +\r\n" + //
+            "      \"EaglerPL: Checking if Plugins are finished :: \" +\r\n" + //
             "        totalLoaded +\r\n" + //
             "        \"/\" +\r\n" + //
             "        pluginsArr.length\r\n" + //
@@ -20,7 +43,7 @@ public class PluginLoader {
             "      clearInterval(identifier);\r\n" + //
             "      window.pluginGracePeriod = false;\r\n" + //
             "      console.log(\r\n" + //
-            "        \"Checking if Plugins are finished :: All plugins loaded! Grace period off.\"\r\n" + //
+            "        \"EaglerPL: Checking if Plugins are finished :: All plugins loaded! Grace period off.\"\r\n" + //
             "      );\r\n" + //
             "    }\r\n" + //
             "  }\r\n" + //
@@ -64,7 +87,12 @@ public class PluginLoader {
             "      req.onload = function xhrLoadHandler() {\r\n" + //
             "        console.log(\"EaglerPL: Loading \" + currentPlugin + \" via method A.\");\r\n" + //
             "        var script = document.createElement(\"script\");\r\n" + //
-            "        script.src = \"data:text/javascript;base64,\" + btoa(req.responseText);\r\n" + //
+            "        try {\r\n" + //
+            "          script.src = \"data:text/javascript;base64,\" + btoa(req.responseText);\r\n" + //
+            "        } catch (error) {\r\n" + //
+            "          methodB(currentPlugin);\r\n" + //
+            "          return;\r\n" + //
+            "        }\r\n" + //
             "        script.setAttribute(\"data-plugin\", currentPlugin);\r\n" + //
             "        script.setAttribute(\"data-isplugin\", true);\r\n" + //
             "        script.onerror = () => {\r\n" + //

@@ -83,7 +83,14 @@
 
 ~ 			return Chunk.getNoSkyLightValue();
 
-> DELETE  1286  @  1286 : 1344
+> INSERT  94 : 98  @  94
+
++ 	public Block getBlock(BlockPos pos) {
++ 		return getBlockState(pos).getBlock();
++ 	}
++ 
+
+> DELETE  1192  @  1192 : 1250
 
 > DELETE  40  @  40 : 64
 
