@@ -25,7 +25,7 @@
 
 > INSERT  25 : 30  @  25
 
-+ 		GuiButton pluginsButton = new GuiButton(9635329, this.width / 2 + 5, this.height / 6 + 24 - 6, 150, 20,
++ 		GuiButton pluginsButton = new GuiButton(9635329, this.width / 2 + 5, this.height / 6 + 144 - 6, 150, 20,
 + 				"Plugins");
 + 		this.buttonList.add(pluginsButton);
 + 		++i;
@@ -46,14 +46,9 @@
 ~ 		GuiButton rp;
 ~ 		this.buttonList.add(rp = new GuiButton(105, this.width / 2 - 155, this.height / 6 + 144 - 6, 150, 20,
 
-> CHANGE  1 : 3  @  1 : 2
+> CHANGE  1 : 2  @  1 : 3
 
 ~ 		GuiButton b;
-~ 		this.buttonList.add(b = new GuiButton(104, this.width / 2 + 5, this.height / 6 + 144 - 6, 150, 20,
-
-> INSERT  1 : 2  @  1
-
-+ 		b.enabled = false;
 
 > INSERT  2 : 4  @  2
 
