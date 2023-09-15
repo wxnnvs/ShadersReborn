@@ -8,7 +8,7 @@ public class EaglercraftVersion {
 	/// Customize these to fit your fork:
 	
 	public static final String projectForkName = "Shaders Reborn";
-	public static final String projectForkVersion = "v1";
+	public static final String projectForkVersion = "v0.2";
 	public static final String projectForkVendor = "wxnnvs";
 	
 	public static final String projectForkURL = "https://github.com/wxnnvs/ShadersReborn";
@@ -23,7 +23,7 @@ public class EaglercraftVersion {
 	public static final String projectOriginName = "Shaders Reborn";
 	public static final String projectOriginAuthor = "wxnnvs";
 	public static final String projectOriginRevision = "1.8";
-	public static final String projectOriginVersion = "v1";
+	public static final String projectOriginVersion = "v0.2";
 	
 	public static final String projectOriginURL = "https://github.com/wxnnvs/ShadersReborn";
 	
@@ -37,7 +37,7 @@ public class EaglercraftVersion {
 	public static final String mainMenuStringD = "Resources Copyright Mojang AB";
 
 	public static final String mainMenuStringE = projectForkName + " " + projectForkVersion;
-	public static final String mainMenuStringF = "Made by " + projectForkVendor;
+	public static final String mainMenuStringF = "Made  with <3 by " + projectOriginAuthor;
 
 	public static final String mainMenuStringG = "Collector's Edition";
 	public static final String mainMenuStringH = "PBR Shaders";
