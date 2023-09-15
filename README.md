@@ -1,4 +1,4 @@
-# Shaders Reborn v1
+# Shaders Reborn v0.1
 
 ![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/menu.png?raw=true)
 
