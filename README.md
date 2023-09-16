@@ -5,6 +5,8 @@
 # Progress so far:
 🟢 Port Plugin API (Latest a4.3)
 
+🔴 PluginAPI.displayToChat() crashes the game
+
 🟠 Restyle Plugin Manager
 
 ⚪ Port Java support (coming after Plugin API, is gonna take a loooong time)
