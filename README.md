@@ -13,7 +13,7 @@
 🟢 - Done | 🟠 - In progress | ⚪ - To-Do
 
 ## Known bugs:
-- Plugins using the displayToChat() function break the game 🟠
+- Plugins using the displayToChat() function break the game
 
 ### This repository contains:
 
