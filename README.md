@@ -5,20 +5,15 @@
 # Progress so far:
 🟢 Port Plugin API (Latest a4.3)
 
-🔴 PluginAPI.displayToChat() crashes the game
-
 🟠 Restyle Plugin Manager
 
 ⚪ Port Java support (coming after Plugin API, is gonna take a loooong time)
 
 ### Color codes
-🟢 - Done
+🟢 - Done | 🟠 - In progress | ⚪ - To-Do
 
-🟠 - In progress
-
-🔴 - Errors
-
-⚪ - To-Do
+## Known bugs:
+- Plugins using the displayToChat() function break the game 🟠
 
 ### This repository contains:
 
