@@ -3,8 +3,8 @@
 ![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/Plugins.png?raw=true)
 
 # Progress so far:
-- [x] Port Plugin API (Latest a4.3)
-- [ ] Implement AutoEagler as alternative to singleplayer
+- [x] [Done] Port Plugin API (Latest a4.3)
+- [ ] [In Progress] Implement AutoEagler as alternative to singleplayer
 - [ ] Restyle Plugin Manager
 - [ ] Port Java support (coming after Plugin API, is gonna take a loooong time)
 
