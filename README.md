@@ -5,10 +5,10 @@
 # Progress so far:
 |Task|Progress|
 |---|---|
-|Port Plugin API (Latest a4.3)|[🟢 Done]|
-|Implement AutoEagler as alternative to singleplayer|[🟠 In Progress]|
-|Restyle Plugin Manager|[⚪ Soon]|
-|Port Java support|[⚪ Soon]|
+|Port Plugin API (Latest a4.3)|🟢 Done|
+|Implement AutoEagler as alternative to singleplayer|🟠 In Progress|
+|Restyle Plugin Manager|⚪ Soon|
+|Port Java support|⚪ Soon|
 
 ## Known bugs:
 - Plugins using the displayToChat() function break the game
