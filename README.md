@@ -3,10 +3,12 @@
 ![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/Plugins.png?raw=true)
 
 # Progress so far:
-- [x] Port Plugin API (Latest a4.3)                                [🟢 Done] 
-- [ ] Implement AutoEagler as alternative to singleplayer          [🟠 In Progress] 
-- [ ] Restyle Plugin Manager                                       [⚪ Soon]
-- [ ] Port Java support                                            [⚪ Soon]
+|Task|Progress|
+|---|---|
+|Port Plugin API (Latest a4.3)|[🟢 Done]|
+|Implement AutoEagler as alternative to singleplayer|[🟠 In Progress]|
+|Restyle Plugin Manager|[⚪ Soon]|
+|Port Java support|[⚪ Soon]|
 
 ## Known bugs:
 - Plugins using the displayToChat() function break the game
