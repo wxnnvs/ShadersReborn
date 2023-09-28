@@ -5,7 +5,7 @@
 # Progress so far:
 |Task|Progress|
 |---|---|
-|Port Plugin API (Latest a4.3)|🟢 Done|
+|Port Plugin API (Outdated: a4.3)|🟢 Done|
 |Implement AutoEagler as alternative to singleplayer|🟠 In Progress|
 |Restyle Plugin Manager|⚪ Soon|
 |Port Java support|⚪ Soon|
