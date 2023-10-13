@@ -44,3 +44,8 @@
 4. Type `chmod +x CompileLatestClient.sh` and hit enter
 5. Type `./CompileLatestClient.sh` and hit enter, a GUI resembling a classic windows installer should open
 6. Follow the steps shown to you in the new window to finish compiling
+
+## Credits
+- OtterDev102: Creator of Eagler Reborn, wrote java support
+- zxmushroom63: Wrote Plugin API
+- wxnnvs (me): Porting Plugin API
