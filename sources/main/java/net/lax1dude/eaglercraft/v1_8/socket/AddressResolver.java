@@ -3,6 +3,7 @@ package net.lax1dude.eaglercraft.v1_8.socket;
 import net.lax1dude.eaglercraft.v1_8.EagRuntime;
 import net.minecraft.client.multiplayer.ServerAddress;
 import net.minecraft.client.multiplayer.ServerData;
+import me.otterdev.eaglerreborn.Relay;
 
 /**
  * Copyright (c) 2022-2023 LAX1DUDE. All Rights Reserved.
@@ -27,9 +28,9 @@ public class AddressResolver {
 		String lc = input.toLowerCase();
 		if(!lc.startsWith("ws://") && !lc.startsWith("wss://")) {
 			if(EagRuntime.requireSSL()) {
-				input = "wss://" + input;
+				input = Relay.relayURL + "/" + input + "._v1_8_x._of";
 			}else {
-				input = "ws://" + input;
+				input = Relay.relayURL + "/" + input + "._v1_8_x._of";
 			}
 		}
 		return input;
