@@ -7,11 +7,8 @@
 |---|---|
 |Update Plugin API (a4.3 -> a5.1)|🟠 In progress|
 |Implement AutoEagler as alternative to singleplayer|🟠 In Progress|
+|Port Java support|🟠 In Progress|
 |Restyle Plugin Manager|⚪ Soon|
-|Port Java support|⚪ Soon|
-
-## Known bugs:
-- Plugins using the displayToChat() function break the game
 
 ### This repository contains:
 
