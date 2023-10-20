@@ -1,7 +1,7 @@
 # Shaders Reborn v0.2
 
 # FAREWELL
-#### I will probably be leaving this project as i don't have time to maintain it and i really fucked something up that I do no understand. I hope y'all can have fun with what it is right now and maybe you guys can update it, i will be checking on this and merge pull requests if needed :)
+#### I will probably take a rest on this project as i don't have time to maintain it and i really fucked something up that I do no understand. I hope y'all can have fun with what it is right now and maybe you guys can update it, i will be checking on this and merge pull requests if needed :)
 
 ![options menu](https://github.com/wxnnvs/ShadersReborn/blob/main/Plugins.png?raw=true)
 
